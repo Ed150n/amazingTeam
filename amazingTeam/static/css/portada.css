@@ -2,3 +2,13 @@
 .circulos i{
     margin-right: 30px ;
 }
+
+/*CUERPO*/
+.contenedor-cuerpo{
+    margin: 0px;
+    padding: 0px;
+}
+.cuerpo nav {
+    background-color: white;
+    padding: 50px 30px 50px;
+}
