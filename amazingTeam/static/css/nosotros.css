@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #322783; /* Fondo azul */
+}
+
+.contenido {
+    max-width: 800px;
+    margin: 20px auto;
+    color: #fff; /* Color de texto blanco */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px; /* Espacio inferior para separar del contenido */
+}
+
+h2 {
+    color: #ffffff; /* Color blanco para los títulos */
+    text-align: center; /* Centrar títulos horizontalmente */
+    margin-bottom: 10px; /* Espacio inferior para separar del contenido */
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Centrar verticalmente los elementos */
+    margin-bottom: 40px; /* Espacio inferior entre filas */
+}
+
+.fila .columna-izquierda,
+.fila .columna-derecha {
+    flex: 1;
+}
+
+.fila .columna-izquierda {
+    text-align: center; /* Centrar contenido en columna izquierda */
+    margin-right: 20px; /* Espacio entre imagen y texto en columna izquierda */
+}
+
+.fila .columna-derecha {
+    text-align: center; /* Centrar contenido en columna derecha */
+    margin-left: 20px; /* Espacio entre texto y imagen en columna derecha */
+}
+
+.fila img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block; /* Asegura que la imagen sea bloque para alinear correctamente */
+    margin: 0 auto 10px; /* Centrar horizontalmente y añadir espacio inferior */
+}
+
+p {
+    text-align: justify; /* Alineación justificada para el texto */
+    margin-top: 10px; /* Espacio superior para separar el texto de la imagen */
+}
+
+/* Estilo específico para la imagen del logo de la universidad */
+.logo-utc {
+    width: 200px; /* Ancho deseado para la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+    display: block; 
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
