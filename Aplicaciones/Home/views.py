@@ -7,3 +7,7 @@ def portada(request):
 #Indice Kathe
 def indice(request):
     return render(request,'Inicio/indice.html')
+
+#nosotros Kathe
+def nosotros(request):
+    return render(request,'Inicio/nosotros.html')

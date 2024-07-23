@@ -8,5 +8,7 @@ urlpatterns = [
     path('',views.portada, name='portada'),
     #Indice Kathe
     path('indice/',views.indice,name='indice'),
+        #Nosotros Kathe
+    path('nosotros/',views.nosotros,name='nosotros'),
 ]
 

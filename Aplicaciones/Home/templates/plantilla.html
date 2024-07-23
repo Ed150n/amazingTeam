@@ -21,6 +21,8 @@
        
         <!--Css Indice kathe-->
         <link rel="stylesheet" href="{% static 'css/indice.css' %}">
+         <!--Css Nosotros kathe-->
+         <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
         <title>Amazing Team</title>
     </head>
 
@@ -44,7 +46,7 @@
                 </li>
                 <li><a href="{% url 'indice'%}">INDICE</a></li>
                 <!-- <li><a href="#section5">Video</a></li> -->
-                <li><a href="#section6">Contact</a></li>
+                <li><a href="{% url 'nosotros'%}">NOSOTROS</a></li>
                 <li><a href="https://templatemo.com" class="external">External</a></li>
             </ul>
             </nav>
