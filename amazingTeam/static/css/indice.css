@@ -1,0 +1,100 @@
+body {
+    background-color: #322783; /* Fondo azul */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.contenidoi {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #201862;
+    box-shadow: 0 0 10px rgba(82, 183, 86, 0.1);
+    color: #fff; /* Color de texto blanco */
+}
+.nav-etiquetas ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
+    gap: 10px; /* Espacio entre elementos */
+}
+.nav-etiquetas ul ul {
+    display: none;
+    background-color: #8DB425; /* Color de fondo del submenu */
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 25px;
+    left: 0; /* Alinear sublista a la izquierda */
+}
+.nav-etiquetas ul li {
+    /* Eliminar text-align: center; para evitar centrar los elementos */
+    position: relative;
+}
+.nav-etiquetas ul li a {
+    display: block;
+    padding: 10px;
+    color: #ffffff; /* Color de texto de las etiquetas */
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    position: relative; /* Asegurar que el enlace sea relativo */
+}
+.nav-etiquetas ul li a:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+.nav-etiquetas ul li:hover > ul {
+    display: block; /* Mostrar submenú al pasar el mouse */
+}
+.sub-lista {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Alinear a la izquierda */
+    font-size: 0.8em; /* Tamaño de fuente más pequeño */
+}
+.sub-lista a {
+    background-color: #8DB425 !important;
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    border-radius: 3px;
+    color: #000000 !important;
+}
+.sub-lista li {
+    margin-bottom: 5px;
+}
+/* Estilo del contenido dinámico */
+.nav-etiquetas ul li a::after {
+    content: attr(data-content); /* Mostrar el contenido dinámico */
+    display: block;
+    margin-top: 1px;
+    font-size: 5px;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.3s ease;
+    background-color: #8DB425; /* Color de fondo del cuadro */
+    padding: 0px; /* Espaciado interno del cuadro */
+    border-radius: 5px; /* Bordes redondeados */
+    color: #fff; /* Color de texto blanco */
+    position: absolute; /* Posicionamiento absoluto para superponer */
+    width: calc(100% - 20px); /* Ancho completo menos el padding */
+    left: 10px; /* Alineado con el borde del elemento padre */
+    z-index: 0; /* Para estar por encima de las etiquetas */
+}
+/* Mostrar contenido dinámico al pasar el mouse */
+.nav-etiquetas ul li a:hover::after {
+    opacity: 1;
+}
+
+/* Colores diferentes para cada etiqueta */
+.nav-etiquetas ul li:nth-child(1) a { background-color: #3498db; } /* Naranja */
+.nav-etiquetas ul li:nth-child(2) a { background-color: #3498db; } /* Azul */
+.nav-etiquetas ul li:nth-child(3) a { background-color: #3498db; } /* Verde */
+.nav-etiquetas ul li:nth-child(4) a { background-color: #F5A425; } /* Rojo */
+.nav-etiquetas ul li:nth-child(5) a { background-color: #F5A425; } /* Morado */
+.nav-etiquetas ul li:nth-child(6) a { background-color: #F5A425; } /* Naranja oscuro */
+.nav-etiquetas ul li:nth-child(7) a { background-color: #e74c3c; } /* Verde oscuro */
+.nav-etiquetas ul li:nth-child(8) a { background-color: #e74c3c; } /* Rojo oscuro */
