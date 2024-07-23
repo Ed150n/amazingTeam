@@ -24,38 +24,47 @@
         <link rel="stylesheet" href="{% static 'plantilla/ingles/assets/css/lightbox.css' %}">
         <!--TemplateMo 557 Grad School https://templatemo.com/tm-557-grad-school-->
        
+        <!--CSS XAV-->
+        <link rel="stylesheet" href="{% static 'css/portada.css' %}">
         <!--Css Indice kathe-->
         <link rel="stylesheet" href="{% static 'css/indice.css' %}">
-         <!--Css Nosotros kathe-->
-         <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+        <!--Css Nosotros kathe-->
+        <link rel="stylesheet" href="{% static 'css/nosotros.css' %}">
+
+        <!--ICONO DE APP-->
+        <link rel="icon" href="{% static 'img/logoApp.jpeg' %}">
         <title>Amazing Team</title>
     </head>
 
     <body>    
         <!--header-->
-        <header class="main-header clearfix" role="header">
-            <div class="logo">
-                <a href="#"><em>Grad</em> School</a>
+        <header class="p-3 bg-dark text-white sticky-top">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <div class="logoUTC">
+                        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                            <img src="https://aplicaciones.utc.edu.ec/sigutc/Styles/Nuevo/assets/images/logo-blanco-universidad.png" alt="logo Universidad">
+                        </a>
+                    </div>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 etiquetas">
+                        <li><a href="{% url 'portada' %}" class="nav-link px-2">INICIO</a></li>
+                        <li><a href="{% url 'indice' %}" class="nav-link px-2">ÍNDICE</a></li>
+                        <li><a href="{% url 'nosotros' %}" class="nav-link px-2">NOSOTROS</a></li>
+                        <li><a href="#" class="nav-link px-2 btnAprender">APRENDER</a></li>
+                        <li><a href="#" class="configuracion"><i class="fa fa-cog fa-2x" title="Configuración"></i></a></li>
+                    </ul>
+                    <!-- <div class="text-end">
+                        <a href="/admin" class="btn btn-warning">Ingresar</a>
+                        <button type="button" class="btn btn-warning">Registrarse</button>
+                    </div> -->
+                    <div class="logoApp">
+                        <a class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                            <img src="{% static 'img/logoApp.jpeg' %}" alt="logo Aplicación" width="80px">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
-            <nav id="menu" class="main-nav" role="navigation">
-                <ul class="main-menu">
-                    <li><a href="#section1">INICIO</a></li>
-                    <li class="has-submenu"><a href="#section2">About Us</a>
-                        <ul class="sub-menu">
-                            <li><a href="#section2">Who we are?</a></li>
-                            <li><a href="#section3">What we do?</a></li>
-                            <li><a href="#section3">How it works?</a></li>
-                            <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="{% url 'indice'%}">INDICE</a></li>
-                    <!-- <li><a href="#section5">Video</a></li> -->
-                    <li><a href="{% url 'nosotros'%}">NOSOTROS</a></li>
-                    <li><a href="https://templatemo.com" class="external">External</a></li>
-                </ul>            
-            </nav>
-        </header>
+        </header>          
 
         <!-- ***** Main Banner Area Start ***** -->
         <section class="section main-banner" id="top" data-section="section1">
