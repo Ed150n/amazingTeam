@@ -22,6 +22,7 @@
 .btnAprender{
     border-radius: 5px;
     background-color: #F5A425;
+    color: white !important;
 }
 .btnAprender:hover{
     border-bottom: none !important;
