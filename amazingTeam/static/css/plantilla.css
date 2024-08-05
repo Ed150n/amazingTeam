@@ -11,7 +11,7 @@
     width: 140px;
 }
 
-/**/
+/*LOGO APP*/
 .logoApp{
     cursor: pointer;
 }
@@ -95,8 +95,8 @@
     border-bottom: 1px solid aqua;
 }
 
-/*VALIDACION FORMULARIO Y MODAL*/
-/*Letras de color rojo*/
+/*VALIDACION FORMULARIO Y MODAL
+Letras de color rojo*/
 label.error{
     color: red;
 }
