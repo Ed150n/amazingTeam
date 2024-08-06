@@ -40,7 +40,7 @@ def insertarUsuario(request):
                                           apellidoMaterno=apellidoMaterno,direccion=direccion,telefono=telefono,fotografia=foto,
                                           email=email,usuario=usuario,contraseña=contraseña,rol=rol)
     messages.success(request,"Usuario registrado exitosamente")
-    return redirect('nuevoUsuario')
+    return redirect('registro')
 #RENDERIZAR FORMULARIO EDITAR USUARIO
 def editarUsuario(request,idUsuario):
     usuarioEditar = Usuario.objects.get(id=idUsuario)
