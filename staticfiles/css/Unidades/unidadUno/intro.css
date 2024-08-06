@@ -1,0 +1,70 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #322783; /* Fondo azul */
+}
+.speech-bubble {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    background: #199FDC;
+    border-radius: 20px;
+    max-width: 40%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 30px solid transparent;
+    border-top-color: #199FDC;
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -10px;
+    margin-bottom: -20px;
+}
+
+.speech-bubble img {
+    display: block;
+    margin: 0 auto;
+    max-width: 20%;
+    height: auto;
+}
+
+.speech-bubble p {
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+.next-button {
+    background-color: #f39c12; /* Color naranja atractivo */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 5px #d35400;
+}
+.next-button:hover {
+    background-color: #e67e22; /* Color naranja más oscuro en hover */
+    box-shadow: 0 5px #e74c3c;
+}
+.next-button:active {
+    background-color: #e67e22;
+    box-shadow: 0 3px #c0392b;
+    transform: translateY(2px);
+}
+

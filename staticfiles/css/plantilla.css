@@ -1,0 +1,106 @@
+/*CONTENEDOR DEL MENU*/
+.contenedorMenu{
+    margin: 0px 10px 0px 30px; /**/
+}
+
+/*LOGO UTC*/
+.logoUTC{
+    margin-right: 90px;
+}
+.logoUTC img{
+    width: 140px;
+}
+
+/*LOGO APP*/
+.logoApp{
+    cursor: pointer;
+}
+
+/*ETIQUETAS DE NAVEGACION*/
+.etiquetas li{
+    padding-left: 30px;
+}
+.etiquetas a{
+    font-weight: 700;
+    color: white;
+}
+.etiquetas a:hover{
+    color: aqua;
+    border-bottom: 1px solid aqua;
+}
+
+.btnAprender{
+    border-radius: 5px;
+    background-color: #F5A425;
+    color: white !important;
+}
+.btnAprender:hover{
+    border-bottom: none !important;
+    color: white !important;
+    background-color: #ed960a;
+}
+.configuracion:hover{
+    color: white !important;
+    border-bottom: none !important;
+    font-size: larger;
+}
+/*BOTONES DE LOGEO*/
+.btnLogeo{
+    border-radius: 20px;
+    background-color: white;
+    color: #569BF0 !important;
+    font-size: smaller;
+    width: 110px;
+    text-align: center;
+    margin-left: 200px;
+    border-bottom: none !important;
+}
+.btnLogeo:hover{
+    background-color: #569BF0;
+    color: white !important;
+}
+.btnRegistro{
+    border-radius: 20px;
+    background-color: white;
+    color: #569BF0 !important;
+    font-size: smaller;
+    border-bottom: none !important;
+}
+.btnRegistro i{
+    padding-left:15px;
+}
+
+/*MODAL Logeo Ocultar Passw*/
+.password-wrapper {
+    position: relative;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 75%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+/*FOOTER*/
+.footer li,a{
+    padding-right: 50px;
+}
+.footer a{
+    color: white;
+}
+.footer a:hover{
+    color: aqua;
+    border-bottom: 1px solid aqua;
+}
+
+/*VALIDACION FORMULARIO Y MODAL
+Letras de color rojo*/
+label.error{
+    color: red;
+}
+/*Bordes de color rojo */
+.form-control.error{
+    border: 1px solid red;
+}

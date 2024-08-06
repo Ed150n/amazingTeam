@@ -1,0 +1,11 @@
+/*MODAL Logeo Ocultar Passw*/
+.passwd-wrapper {
+    position: relative;
+}
+.toggle-passwd {
+    position: absolute;
+    right: 20px;
+    top: 61%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
