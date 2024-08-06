@@ -75,11 +75,10 @@ def insertarUsuario(request):
 
 
 # TEMPLATE UNIDADES
-@login_required
+
 def unidadUno(request):
     return render(request,'Unidades/unidadUno/unidadUno.html')
 
 #kathe pagina1
-@login_required
 def paginaUno(request):
     return render(request, "Unidades/unidadUno/pagina1.html")

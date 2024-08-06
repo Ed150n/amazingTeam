@@ -11,12 +11,12 @@ from django.contrib import messages
 from Aplicaciones.Home.models import Usuario # Model Usuario de Home
 
 # Create your views here.
-@login_required
+
 def inicio(request):
     return render(request,'inicio.html')
 
 # Renderizar lista de usuarios
-@login_required
+
 def listadoUsuarios(request):
     usuariosBdd = Usuario.objects.all()
     return render(request,"Usuario/listadoUsuarios.html",{'usuarios':usuariosBdd})

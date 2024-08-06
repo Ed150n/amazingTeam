@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('Aplicaciones.Gestion.urls')), # Modulo de Gestion
     path('',include('Aplicaciones.Home.urls')),
-    path('accounts/', include('django.contrib.auth.urls')), # Rutas que requieren autenticacion
+    ##path('accounts/', include('django.contrib.auth.urls')), # Rutas que requieren autenticacion
 ]
 
 # Validacion para visualizar los archivos subidos en modo DEV

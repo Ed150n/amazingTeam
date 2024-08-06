@@ -148,8 +148,8 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'amazingTeam/media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Authentication settings
-LOGIN_URL = '/accounts/login/' # Añadir esto en caso de no funcionar directamente
+#LOGIN_URL = '/accounts/login/' # Añadir esto en caso de no funcionar directamente
 
 # VARIABLES DE REDIRECCION DE LOGIN Y LOGOUT
-LOGIN_REDIRECT_URL = '/unidadUno/'
+#LOGIN_REDIRECT_URL = '/unidadUno/'
 # LOGOUT_REDIRECT_URL = 'portada'
