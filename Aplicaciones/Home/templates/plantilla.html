@@ -94,6 +94,42 @@
                 </div>
             </div>
         </header>
+        <!--Modal Logeo-->
+        <!--Incluye la URL Logeo-->
+        <div class="modal fade" id="logeoModal" tabindex="-1" aria-labelledby="logeoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h1 class="modal-title fs-5" id="logeoModalLabel"><b>Iniciar Sesión</b></h1>
+                    <h6 style="text-align: center; color: #696969;">con</h6>
+                    <div class="modal-body">
+                        <h6 style="text-align: center; color: #696969;">o</h6>
+                        <form action="{% url 'validarLogeo' %}" id="frm_inicio_sesion" method="post">
+                            {% csrf_token %}
+                            <label><b>Usuario o Correo:</b></label>
+                            <input type="text" name="username" id="username" class="form-control" placeholder="Ingrese su nombre de usuario o correo electrónico">
+                            <br>
+                            <div class="mb-3 password-wrapper">
+                                <label for="contraseña" class="form-label"><b>Contraseña:</b></label>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="Ingrese su contraseña">
+                                <i class="fa fa-eye toggle-password"></i>
+                            </div>
+                            <a href="" target="_blank" class="text-end">¿Recuperar contraseña?</a>                  
+                            <br><br>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa fa-sign-in"></i> Ingresar
+                                </button>
+                                <button type="reset" class="btn btn-danger" data-bs-dismiss="modal">
+                                    <i class="fa fa-times"></i>Cancelar
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FIN MODAL-->
         {% block body %}
         {% endblock %}
         <footer class="py-3 my-4">
