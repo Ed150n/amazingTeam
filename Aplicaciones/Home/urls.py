@@ -15,6 +15,7 @@ urlpatterns = [
     #LOGIN
     path('validarLogeo/',views.validarLogeo, name='validarLogeo'),
 
+
     # CERRAR SESION
     path('cerrarSesion/',views.cerrarSesion, name='cerrarSesion'),
 
@@ -24,5 +25,6 @@ urlpatterns = [
 
     # TEMPLATE UNIDADES
     path('unidadUno/',views.unidadUno, name='unidadUno'),
+    path('paginaUno/',views.paginaUno, name='paginaUno'),
 ]
 

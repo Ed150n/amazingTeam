@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.membrete {
+    background-color: #4CAF50; /* Fondo verde */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    border-radius: 8px;
+    margin: 20px auto; /* Centra el membrete en la página */
+    max-width: 800px; /* Ancho máximo igual al del contenido */
+    box-sizing: border-box;
+}
+.texto {
+    max-width: 60%; /* Limita el ancho del texto */
+    text-align: left;
+}
+.imagen {
+    margin-left: 20px; /* Espacio entre el texto y la imagen */
+}
+.imagen img {
+    width: 100%;
+    max-width: 300px; /* Limita el tamaño máximo de la imagen */
+    height: auto;
+}
+.title, .subtitle {
+    margin: 0;
+}
+.title {
+    font-size: 24px;
+}
+.highlight {
+    color: #FFEB3B; /* Color amarillo para "Introduce Yourself" y el nombre */
+}
+.subtitle {
+    font-size: 18px;
+}
+.contenido {
+    padding: 20px;
+    max-width: 800px; /* Ancho máximo igual al del membrete */
+    margin: auto; /* Centra el contenido en la página */
+    box-sizing: border-box;
+}
+.abecedario {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.abecedario td {
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px; /* Tamaño de fuente más pequeño */
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.color-a { background-color: rgba(255, 105, 97, 0.6); } /* Coral claro */
+.color-b { background-color: rgba(107, 91, 149, 0.6); } /* Gris azulado claro */
+.color-c { background-color: rgba(136, 176, 75, 0.6); } /* Verde pasto claro */
+.color-d { background-color: rgba(247, 202, 201, 0.6); } /* Rosa claro */
+.color-e { background-color: rgba(146, 168, 209, 0.6); } /* Azul claro */
+.color-f { background-color: rgba(240, 178, 122, 0.6); } /* Amarillo dorado claro */
+.color-g { background-color: rgba(230, 230, 230, 0.6); } /* Gris claro */
+.color-h { background-color: rgba(255, 204, 188, 0.6); } /* Melocotón claro */
+.color-i { background-color: rgba(213, 170, 255, 0.6); } /* Lila claro */
+.color-j { background-color: rgba(195, 224, 229, 0.6); } /* Azul cielo claro */
+.color-k { background-color: rgba(194, 194, 240, 0.6); } /* Azul pastel */
+.color-l { background-color: rgba(245, 183, 177, 0.6); } /* Rojo claro */
+.color-m { background-color: rgba(249, 231, 159, 0.6); } /* Amarillo pálido */
+.color-n { background-color: rgba(213, 245, 227, 0.6); } /* Verde menta claro */
+.color-o { background-color: rgba(247, 220, 111, 0.6); } /* Amarillo */
+.color-p { background-color: rgba(250, 208, 46, 0.6); } /* Amarillo dorado */
+.color-q { background-color: rgba(249, 168, 37, 0.6); } /* Amarillo oscuro */
+.color-r { background-color: rgba(255, 183, 77, 0.6); } /* Naranja claro */
+.color-s { background-color: rgba(214, 234, 248, 0.6); } /* Azul claro */
+.color-t { background-color: rgba(229, 115, 115, 0.6); } /* Rojo claro */
+.color-u { background-color: rgba(186, 104, 200, 0.6); } /* Violeta */
+.color-v { background-color: rgba(220, 248, 198, 0.6); } /* Verde claro */
+.color-w { background-color: rgba(77, 182, 172, 0.6); } /* Verde turquesa */
+.color-x { background-color: rgba(79, 195, 247, 0.6); } /* Azul claro */
+.color-y { background-color: rgba(255, 179, 0, 0.6); } /* Amarillo anaranjado */
+.color-z { background-color: rgba(255, 87, 34, 0.6); } /* Naranja intenso */
+
+.arrastrar {
+    margin-top: 20px;
+}
+#drag-area-name, #drag-area-spell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.drag-item {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(100, 100, 100, 0.2); /* Gris claro y transparente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+#drop-area-name, #drop-area-spell {
+    width: 100%;
+    min-height: 80px; /* Asegura una altura mínima para el área de caída */
+    border: 2px dashed #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9; /* Fondo claro para el área de caída */
+}
+.example-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200, 200, 200, 0.3); /* Fondo gris claro */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.next-button {
+    background-color: #e74c3c; /* Color tomate */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 5px #c0392b;
+}
+.next-button:hover {
+    background-color: #c0392b; /* Tomate más oscuro */
+    box-shadow: 0 5px #e74c3c;
+}
+.next-button:active {
+    background-color: #c0392b; /* Tomate más oscuro */
+    box-shadow: 0 3px #e74c3c;
+    transform: translateY(2px);
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    .membrete {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    .imagen {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .imagen img {
+        max-width: 100%;
+    }
+    .abecedario td {
+        padding: 8px;
+        font-size: 16px;
+    }
+    .drag-item {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .example-box {
+        font-size: 20px;
+        padding: 10px;
+    }
+}
+@media (max-width: 480px) {
+    .membrete {
+        padding: 5px;
+    }
+    .abecedario td {
+        padding: 5px;
+        font-size: 14px;
+    }
+    .drag-item {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+    .example-box {
+        font-size: 18px;
+        padding: 5px;
+    }
+    .next-button {
+        background-color: #e74c3c; /* Color tomate */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 20px 2px;
+        cursor: pointer;
+        border-radius: 12px;
+        box-shadow: 0 5px #c0392b;
+    }
+    .next-button:hover {
+        background-color: #c0392b; /* Tomate más oscuro */
+        box-shadow: 0 5px #e74c3c;
+    }
+    .next-button:active {
+        background-color: #c0392b; /* Tomate más oscuro */
+        box-shadow: 0 3px #e74c3c;
+        transform: translateY(2px);
+    }
+}
