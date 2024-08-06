@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-!$b3-u#h3=fe8z_2iqvpv6+i#bclzdgsk=jjqe%%#r1vf4z=bq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'amazing-team.onrender.com').split(',')
 
 # Application definition
 
