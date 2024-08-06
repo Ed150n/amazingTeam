@@ -1,0 +1,85 @@
+{% extends "plantilla.html" %}
+{% block body %}
+    <br>
+    <div class="card">
+        <div class="card-title text-center">
+            <h3><b>LISTADO DE USUARIOS</b></h3>
+        </div>
+    </div>
+    <br>
+    <div class="text-center tblUsuarios">
+        <div class="text-end">
+            <a href="{% url 'nuevoUsuario' %}" class="btn btn-success">Agregar Usuario</a>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover" id="tbl-usuarios">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>PRIMER NOMBRE</th>
+                        <th>SEGUNDO NOMBRE</th>
+                        <th>APELLIDO PATERNO</th>
+                        <th>APELLIDO MATERNO</th>
+                        <th>DIRECCIÓN</th>
+                        <th>TELÉFONO</th>
+                        <th>EMAIL</th>
+                        <th>USUARIO</th>
+                        <th>CONTRASEÑA</th>
+                        <th>ROL</th>
+                        <th>FOTOGRAFÍA</th>
+                        <th>ACCIONES</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for usuarioTemporal in usuarios %}
+                        <tr>
+                            <td>{{usuarioTemporal.id}}</td>
+                            <td>{{usuarioTemporal.primerNombre}}</td>
+                            <td>{{usuarioTemporal.segundoNombre}}</td>
+                            <td>{{usuarioTemporal.apellidoPaterno}}</td>
+                            <td>{{usuarioTemporal.apellidoMaterno}}</td>
+                            <td>{{usuarioTemporal.direccion}}</td>
+                            <td>{{usuarioTemporal.telefono}}</td>
+                            <td>{{usuarioTemporal.email}}</td>
+                            <td>{{usuarioTemporal.usuario}}</td>
+                            <td>{{usuarioTemporal.contraseña}}</td>
+                            <td>{{usuarioTemporal.rol}}</td>
+                            <th>
+                                {% if usuarioTemporal.fotografia %}
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            FOTO
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="{{ usuarioTemporal.fotografia.url }}" target="_blank">VER</a></li>
+                                            <li><a download class="dropdown-item" href="{{ usuarioTemporal.fotografia.url }}">Descargar</a></li>
+                                        </ul>
+                                    </div>
+                                {% else %}
+                                    No hay fotografía
+                                {% endif %}
+                            </th>                       
+                            <td>                      
+                                <a href="{% url 'editarUsuario' usuarioTemporal.id %}" class="btn btn-warning">
+                                    <i class="fa fa-pencil" title="Editar"></i>
+                                </a>
+                                <a href="" onclick="return confirm('Esta seguro?');x" class="btn btn-danger">
+                                    <i class="fa fa-trash" title="Eliminar"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>  
+    <script>
+        let table = new DataTable('#tbl-usuarios');
+    </script>
+    <style>
+        .tblUsuarios{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+{% endblock %}
