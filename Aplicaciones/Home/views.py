@@ -40,7 +40,7 @@ def cerrarSesion(request):
 
 # VALIDAR CORREO O USUARIO DEL LOGEO XAV
 def validarLogeo(request):
-    usu=request.POST["user"]
+    usu=request.POST["username"]
     con=request.POST["password"]
 
     producto = Usuario.objects.filter(usuario=usu,contraseña=con).first()
