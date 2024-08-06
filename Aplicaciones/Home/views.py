@@ -1,3 +1,4 @@
+from urllib import request
 from django.shortcuts import render,redirect
 from django.http import JsonResponse
 
@@ -37,24 +38,22 @@ def cerrarSesion(request):
     logout(request)
     return redirect('portada')
 
-# VALIDAR CORREO O USUARIO DEL LOGEO KATHE/XAV
+# VALIDAR CORREO O USUARIO DEL LOGEO XAV
 def validarLogeo(request):
-    if request.method == 'POST':
-        username = request.POST['username']
-        password = request.POST['password']
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('unidadUno')  # Redirige a la vista que deseas después de iniciar sesión
-        else:
-            # Manejar el error de autenticación
-            pass
-    return render(request, 'unidadUno.html')
+    usu=request.POST["user"]
+    con=request.POST["password"]
+
+    producto = Usuario.objects.filter(usuario=usu,contraseña=con).first()
+    if producto:
+        messages.success(request,"Inicio de Sesión con exito.")
+        return redirect('unidadUno')
+    else:
+        messages.error(request,"ERROR, Intente nuevamente.")
+        return redirect('login')
 
 #*******************************************USUARIO********************************************#
 
 # Insertar con AJAX XAV
-@csrf_exempt
 def insertarUsuario(request):
     primerNombre = request.POST["primerNombre"]
     segundoNombre = request.POST["segundoNombre"]
@@ -71,10 +70,8 @@ def insertarUsuario(request):
     Usuario.objects.create(primerNombre=primerNombre,segundoNombre=segundoNombre,apellidoPaterno=apellidoPaterno,
                                           apellidoMaterno=apellidoMaterno,direccion=direccion,telefono=telefono,fotografia=foto,
                                           email=email,usuario=usuario,contraseña=contraseña,rol=rol)
-    return JsonResponse({
-        'estado': True,
-        'mensaje': 'Usuario registrado exitosamente',
-    })
+    messages.success(request,"Usuario registrado exitosamente")
+    return redirect('registro')
 
 
 # TEMPLATE UNIDADES

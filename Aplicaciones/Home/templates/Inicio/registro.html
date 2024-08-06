@@ -7,7 +7,7 @@
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <br><br>
-                <form action="#"  enctype="multipart/form-data" id="frm_registro_usuario">
+                <form action="{% url 'insertarUsuario' %}"  enctype="multipart/form-data" id="frm_registro_usuario" method="post">
                     {% csrf_token %}
                     <div class="row bg-white pb-3">
                         <!--PARTE 1-->
