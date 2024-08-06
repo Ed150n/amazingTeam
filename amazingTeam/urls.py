@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',include('Aplicaciones.Gestion.urls')), # Modulo de Gestion
     path('',include('Aplicaciones.Home.urls')),
     path('accounts/', include('django.contrib.auth.urls')), # Rutas que requieren autenticacion
 ]

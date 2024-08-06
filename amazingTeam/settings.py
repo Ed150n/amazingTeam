@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Añadir modulos del proyecto
     'Aplicaciones.Home',
+    # Añadir modulo Gestion
+    'Aplicaciones.Gestion',
 ]
 
 MIDDLEWARE = [
