@@ -108,36 +108,5 @@ document.addEventListener("DOMContentLoaded", function() {
             },
         },
         //INGRESAR CON METODO AJAX (asincronica)
-        submitHandler:function(formulario){ //funcion para peticion asincrona
-            // Obtener la URL del contenedor de datos
-            const urlRegistro = document.getElementById('url-container').getAttribute('data-url');
-            var formData = new FormData(formulario);// Obtiene archivos multimedia y campos demás
-            $.ajax({
-                url:urlRegistro, //llamado a la funión de insertar
-                type:'post',
-                data:formData,
-                contentType: false, // Necesario para enviar archivos
-                processData: false, // Necesario para enviar archivos
-                success:function(data){
-                    if(data.estado){
-                        Swal.fire({
-                            title:"CONFIRMACIÓN",
-                            text:data.mensaje,
-                            icon:'success'
-                        });
-                        $(formulario)[0].reset();
-                    }else{
-                        Swal.fire({
-                            title:"ERROR",
-                            text:"Error al insertar los datos",
-                            icon:'error'
-                        });
-                    }
-                },
-                error: function(xhr, status, error) {
-                    alert("Error en la solicitud:", error);
-                }
-            });
-        }
     });  
 });
