@@ -29,6 +29,8 @@ def indice(request):
 # nosotros Kathe
 def nosotros(request):
     return render(request,'Inicio/nosotros.html')
+# unidadUno kathe
+
 
 # FUNCION PARA CERRAR SESION
 def cerrarSesion(request):
@@ -78,4 +80,9 @@ def insertarUsuario(request):
 # TEMPLATE UNIDADES
 @login_required
 def unidadUno(request):
-    return render(request,'Unidad/unidadUno.html')
+    return render(request,'Unidades/unidadUno/unidadUno.html')
+
+#kathe pagina1
+@login_required
+def paginaUno(request):
+    return render(request, "Unidades/unidadUno/pagina1.html")

@@ -1,0 +1,43 @@
+{% extends "plantilla.html" %}
+{% block body %}
+<br>
+<center><h1>
+    UNIT 1
+</h1></center>
+<br>
+<div class="container">
+    <div class="col-md-6 speech-bubble">
+        <p>¡Hi! My name is Sara. !</p>
+    </div>
+    &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+    <div class="col-md-6 speech-bubble">
+        <p>¡Hello! My name is 
+            Keiko. !</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <br>
+            <div class="speech-buble">
+                <img src="{% static 'img/1welcom.png' %}" alt="Niña conversando" class="bubble-img">
+            </div>               
+        </div>
+        <div class="col-md-6 text-center">
+            <br>
+            <div class="speech-buble">
+                <img src="{% static 'img/2welcom-.png' %}" alt="Niño Conversando" class="bubble-img">
+            </div>
+            
+        </div> 
+    </div>
+</div>
+<center><h1>INTRODUCE YOURSELF </h1></center>
+<div class="text-center">
+    <a href="{% url 'paginaUno' %}">
+        <button class="next-button">Next</button>
+    </a> 
+</div>
+
+
+{% endblock %}
+
